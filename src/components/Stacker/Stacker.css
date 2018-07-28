@@ -1,12 +1,17 @@
 .Stacker {
 	background: #5cc2f1;
-	width: 50%;
-	min-width: 320px;
 	display: inline-block;
 	padding: 7em 2em 5em;
 	margin: 0;
 	box-sizing: border-box;
 	overflow: hidden;
+	width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+	.Stacker {
+		width: 50%;
+	}
 }
 
 .Stacker-secondary {
