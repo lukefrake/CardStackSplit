@@ -17,6 +17,7 @@ class Cards extends Component {
         two: "second",
         three: "third",
         four: "fourth",
+        five: "",
       }
     };
     this.cardSorter = this.cardSorter.bind(this);
