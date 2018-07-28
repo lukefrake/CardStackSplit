@@ -6,6 +6,7 @@ import img3 from './3.png';
 import img4 from './4.png';
 import img5 from './5.png';
 import Card from '../Card/Card';
+import Button from '../Button/Button';
 
 class Cards extends Component {
   constructor(props) {
@@ -117,12 +118,12 @@ class Cards extends Component {
           <Card img={img5} classState={this.state.cardClasses.five}/>
         </ul>
         <div className="Cards_controls">
-          <button className="Button Button-reject" onClick={() => this.cardSorter({yes: false, behaviour: this.props.behaviour})}>
+          <Button className="Button-reject" onClick={() => this.cardSorter({yes: false, behaviour: this.props.behaviour})}>
             &#10006;
-          </button>
-          <button className="Button" onClick={() => this.cardSorter({yes: true})}>
+          </Button>
+          <Button onClick={() => this.cardSorter({yes: true})}>
             &#10004;
-          </button>
+          </Button>
         </div>
       </div>
     );
