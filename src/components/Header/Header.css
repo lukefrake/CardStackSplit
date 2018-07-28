@@ -1,0 +1,13 @@
+.header {
+  background: #3f51b5;
+  text-align: center;
+}
+
+.header-lead {
+  margin: 0;
+  padding: 1em 0;
+  letter-spacing: -1px;
+  font-size: 4em;
+  line-height: 1;
+  color: white;
+}

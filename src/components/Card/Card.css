@@ -1,0 +1,89 @@
+.Card {
+	border-radius: 5px;
+	overflow: hidden;
+	position: absolute;
+	list-style: none;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+
+.Card_image {
+	height: 100%;
+	width: 100%;
+}
+
+.Card-first, .Card-second, .Card-third {
+	opacity: 1;
+}
+
+.Card-first {
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+	z-index: 3;
+}
+
+.Card-second {
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -50, 1);
+	z-index: 2;
+}
+
+.Card-third {
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1);
+	z-index: 1;
+}
+
+.Card-fourth {
+	transform: translate3d(0px, 0px, -150px);
+}
+
+.Card-yes {
+	animation: yes 0.5s ease-out;
+}
+
+.Card-no {
+	animation: no 0.5s ease-out;
+}
+
+.Card-return {
+	animation: return 0.5s ease-out;
+}
+
+@keyframes no {
+  from {
+    opacity: 1;
+  }
+  95% {
+  	opacity: 1;
+  }
+  to {
+  	opacity: 0;
+    transform: rotate(-5deg) translate(-550px, 0);
+  }
+}
+
+@keyframes return {
+  from {
+    opacity: 0;
+    z-index: 10;
+    transform: rotate(-5deg) translate(-550px, 0);
+  }
+  to {
+  	opacity: 1;
+	transform: rotate(0) translate(0, 0);
+  }
+}
+
+@keyframes yes {
+  from {
+    opacity: 1;
+  }
+  95% {
+  	opacity: 1;
+  }
+  to {
+  	opacity: 0;
+    transform: rotate(5deg) translate(550px, 0);
+  }
+}
